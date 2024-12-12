@@ -35,6 +35,8 @@
             SensorType = new TextBox();
             SensorID = new TextBox();
             label3 = new Label();
+            DBView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)DBView).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -95,11 +97,21 @@
             label3.TabIndex = 6;
             label3.Text = "Sensor ID";
             // 
+            // DBView
+            // 
+            DBView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            DBView.Location = new Point(317, 12);
+            DBView.Name = "DBView";
+            DBView.Size = new Size(555, 437);
+            DBView.TabIndex = 8;
+            DBView.CellContentClick += DBView_CellContentClick;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(884, 461);
+            Controls.Add(DBView);
             Controls.Add(SensorID);
             Controls.Add(label3);
             Controls.Add(SensorType);
@@ -110,6 +122,7 @@
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)DBView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,5 +136,6 @@
         private TextBox SensorType;
         private TextBox SensorID;
         private Label label3;
+        private DataGridView DBView;
     }
 }
